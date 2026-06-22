@@ -11,6 +11,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -19,17 +20,23 @@ color:white;
 }
 
 header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
+padding:80px 20px;
 background:linear-gradient(135deg,#2563eb,#06b6d4);
 }
 
+.profile{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+box-shadow:0 0 25px rgba(255,255,255,0.5);
+}
+
 header h1{
-font-size:60px;
+margin-top:20px;
+font-size:50px;
 }
 
 header p{
@@ -37,19 +44,23 @@ font-size:22px;
 margin-top:10px;
 }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:white;
-color:#2563eb;
+nav{
+background:#111827;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
 text-decoration:none;
-border-radius:30px;
+margin:0 15px;
 font-weight:bold;
 }
 
 section{
-padding:80px 10%;
+padding:60px 10%;
 }
 
 .card{
@@ -57,12 +68,14 @@ background:#1e293b;
 padding:25px;
 border-radius:15px;
 margin-top:20px;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
 }
 
 .skills{
 display:flex;
-gap:15px;
 flex-wrap:wrap;
+gap:10px;
+margin-top:15px;
 }
 
 .skill{
@@ -71,10 +84,33 @@ padding:10px 20px;
 border-radius:20px;
 }
 
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
 footer{
 background:#111827;
-padding:20px;
 text-align:center;
+padding:20px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
 }
 </style>
 </head>
@@ -82,51 +118,70 @@ text-align:center;
 <body>
 
 <header>
+<img src="krish.jpg" class="profile" alt="Krish Photo">
 <h1>Krish Banjara</h1>
 <p>Website Developer & Freelancer</p>
 <a href="#contact" class="btn">Hire Me</a>
 </header>
 
-<section>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
 <h2>About Me</h2>
 <div class="card">
 <p>
-Hello! My name is Krish Banjara. I create modern websites,
-business websites, portfolio websites and landing pages.
+Hello! My name is Krish Banjara.
+I create modern Portfolio Websites, Business Websites and Landing Pages.
 </p>
 </div>
 </section>
 
-<section>
-<h2>Skills</h2>
+<section id="skills">
+<h2>My Skills</h2>
+<div class="card">
 <div class="skills">
 <div class="skill">HTML</div>
 <div class="skill">CSS</div>
 <div class="skill">Responsive Design</div>
-<div class="skill">Web Development</div>
+<div class="skill">Website Development</div>
+</div>
 </div>
 </section>
 
-<section>
+<section id="services">
 <h2>Services</h2>
 <div class="card">
-<p>✔ Business Website</p>
 <p>✔ Portfolio Website</p>
+<p>✔ Business Website</p>
 <p>✔ Landing Page</p>
+<p>✔ Website Redesign</p>
 </div>
 </section>
 
 <section id="contact">
-<h2>Contact</h2>
+<h2>Contact Me</h2>
 <div class="card">
-<p>📱 7340695561</p>
-<p>📧 krishbanjara2233@gmail.com</p>
+<p>📱 Mobile: 7340695561</p>
+<p>📧 Email: krishbanjara2233@gmail.com</p>
+
+<a href="https://wa.me/917340695561" class="btn" target="_blank">
+WhatsApp Message
+</a>
 </div>
 </section>
 
 <footer>
-© 2026 Krish Banjara. All Rights Reserved.
+© 2026 Krish Banjara | All Rights Reserved
 </footer>
+
+<a href="https://wa.me/917340695561" class="whatsapp" target="_blank">
+WhatsApp
+</a>
 
 </body>
 </html>
