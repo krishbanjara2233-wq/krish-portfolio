@@ -4,304 +4,95 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Krish Banjara | Ultra Premium Portfolio</title>
-
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#0f172a;
-color:white;
-}
-
-header{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-background:linear-gradient(135deg,#0f172a,#1e3a8a,#06b6d4);
-}
-
-.profile{
-width:200px;
-height:200px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid white;
-box-shadow:0 0 40px #38bdf8;
-animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-}
-
-h1{
-font-size:55px;
-margin-top:20px;
-}
-
-.hero-text{
-font-size:22px;
-margin-top:10px;
-color:#e2e8f0;
-}
-
-.btn{
-display:inline-block;
-margin:10px;
-padding:12px 25px;
-background:#38bdf8;
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-transition:.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
-}
-
-nav{
-position:sticky;
-top:0;
-background:#111827;
-padding:15px;
-text-align:center;
-z-index:999;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-font-weight:bold;
-}
-
-section{
-padding:80px 10%;
-}
-
-.section-title{
-text-align:center;
-font-size:35px;
-margin-bottom:30px;
-color:#38bdf8;
-}
-
-.card{
-background:#1e293b;
-padding:25px;
-border-radius:15px;
-margin-bottom:20px;
-box-shadow:0 0 15px rgba(0,0,0,.3);
-}
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.skill{
-background:#2563eb;
-padding:10px 20px;
-border-radius:20px;
-}
-
-.bar{
-background:#334155;
-height:12px;
-border-radius:10px;
-overflow:hidden;
-margin-bottom:15px;
-}
-
-.fill{
-height:100%;
-background:#38bdf8;
-}
-
-.social{
-text-align:center;
-margin-top:20px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px 20px;
-border-radius:50px;
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-footer{
-background:#111827;
-padding:20px;
-text-align:center;
-}
-
-@media(max-width:768px){
-h1{
-font-size:35px;
-}
-.hero-text{
-font-size:18px;
-}
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{background:#0f172a;color:#fff;scroll-behavior:smooth}
+header{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#0f172a,#1e3a8a,#06b6d4)}
+.profile{width:180px;height:180px;border-radius:50%;object-fit:cover;border:5px solid #fff}
+nav{position:sticky;top:0;background:#111827;padding:15px;text-align:center}
+nav a{color:#fff;text-decoration:none;margin:0 12px}
+section{padding:60px 10%}
+.card{background:#1e293b;padding:20px;border-radius:15px;margin:15px 0}
+.btn{display:inline-block;padding:12px 22px;background:#38bdf8;color:#fff;text-decoration:none;border-radius:25px;margin:8px}
+.bar{background:#334155;height:12px;border-radius:10px}
+.fill{height:100%;background:#38bdf8}
+#modeBtn{position:fixed;top:15px;right:15px;padding:10px}
+.light{background:#fff;color:#111}
+.light .card{background:#eee;color:#111}
+footer{text-align:center;padding:20px;background:#111827}
 </style>
 </head>
-
 <body>
-
+<button id="modeBtn" onclick="document.body.classList.toggle('light')">🌙</button>
 <header>
-
-<img src="krish.jpg" class="profile" alt="Krish Photo">
-
+<img src="krish.jpg" class="profile">
 <h1>Krish Banjara</h1>
-
-<p class="hero-text">
-Website Developer • Freelancer • Web Designer
-</p>
-
-<a href="#contact" class="btn">Hire Me</a>
-
+<p>Website Developer • Freelancer • Web Designer</p>
+<a class="btn" href="#contact">Hire Me</a>
 </header>
 
 <nav>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
-<a href="#services">Services</a>
 <a href="#projects">Projects</a>
+<a href="#reviews">Reviews</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
-
-<h2 class="section-title">About Me</h2>
-
-<div class="card">
-<p>
-Hello! My name is Krish Banjara.
-I build professional portfolio websites,
-business websites and landing pages.
-</p>
-</div>
-
-</section>
+<section id="about"><div class="card"><h2>About Me</h2><p>I build modern websites and portfolio pages.</p></div></section>
 
 <section id="skills">
-
-<h2 class="section-title">Skills</h2>
-
 <div class="card">
-
-<p>HTML</p>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-
-<p>CSS</p>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-
-<p>Responsive Design</p>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-
-<p>GitHub Pages</p>
-<div class="bar"><div class="fill" style="width:75%"></div></div>
-
+<h2>Skills</h2>
+<p>HTML</p><div class="bar"><div class="fill" style="width:90%"></div></div><br>
+<p>CSS</p><div class="bar"><div class="fill" style="width:85%"></div></div><br>
+<p>Web Design</p><div class="bar"><div class="fill" style="width:80%"></div></div>
 </div>
-
-</section>
-
-<section id="services">
-
-<h2 class="section-title">Services</h2>
-
-<div class="card">
-<h3>Business Website</h3>
-<p>Professional websites for shops and businesses.</p>
-</div>
-
-<div class="card">
-<h3>Portfolio Website</h3>
-<p>Personal portfolio websites for students and freelancers.</p>
-</div>
-
-<div class="card">
-<h3>Landing Page</h3>
-<p>Modern landing pages for promotions.</p>
-</div>
-
 </section>
 
 <section id="projects">
+<div class="card"><h2>Projects</h2><p>Portfolio Website</p><p>Business Website</p><p>Landing Page</p></div>
+</section>
 
-<h2 class="section-title">Projects</h2>
+<section id="reviews">
+<div class="card"><h2>Client Reviews</h2><p>⭐⭐⭐⭐⭐ Excellent work.</p><p>⭐⭐⭐⭐⭐ Professional design.</p></div>
+</section>
 
+<section>
 <div class="card">
-<h3>Portfolio Website</h3>
-<p>Modern personal portfolio project.</p>
+<h2>Visitor Counter</h2>
+<p id="counter">0</p>
 </div>
+</section>
 
+<section>
 <div class="card">
-<h3>Business Website</h3>
-<p>Professional business website design.</p>
+<h2>Location</h2>
+<iframe src="https://maps.google.com/maps?q=Parbatsar&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300"></iframe>
 </div>
-
-<div class="card">
-<h3>Landing Page</h3>
-<p>Marketing landing page project.</p>
-</div>
-
 </section>
 
 <section id="contact">
-
-<h2 class="section-title">Contact Me</h2>
-
 <div class="card">
-
-<p>📱 Mobile: 7340695561</p>
-<p>📧 Email: krishbanjara2233@gmail.com</p>
-
-<div class="social">
-
-<a href="https://wa.me/917340695561" target="_blank" class="btn">
-WhatsApp
-</a>
-
-<a href="https://www.instagram.com/thekrish.18/" target="_blank" class="btn">
-Instagram
-</a>
-
+<h2>Contact</h2>
+<p>📱 7340695561</p>
+<p>📧 krishbanjara2233@gmail.com</p>
+<a class="btn" href="https://wa.me/917340695561">WhatsApp</a>
+<a class="btn" href="https://www.instagram.com/thekrish.18/">Instagram</a>
 </div>
-
-</div>
-
 </section>
 
-<footer>
-© 2026 Krish Banjara | All Rights Reserved
-</footer>
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
 
-<a href="https://wa.me/917340695561"
-target="_blank"
-class="whatsapp">
-WhatsApp
-</a>
+<footer>© 2026 Krish Banjara</footer>
 
+<script>
+let count=localStorage.getItem("visits")||0;
+count++;
+localStorage.setItem("visits",count);
+document.getElementById("counter").innerText=count;
+</script>
 </body>
 </html>
